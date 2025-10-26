@@ -1,0 +1,22 @@
+project:
+  name: DeceptiNet
+  seed: 42
+  device: "cpu" # you have CPU-only PyTorch; set to "cpu"
+
+paths:
+  data_root: "data/dummy_dataset/processed" # point to the dummy dataset
+  checkpoints: "checkpoints"
+  logs: "logs"
+
+training:
+  img_size: 128 # dummy images are 128x128; keeps it fast
+  batch_size: 4 # tiny dataset => small batch
+  num_workers: 0 # safest on Windows; avoids DataLoader issues
+  epochs: 2 # enough to test the pipeline
+  lr: 1.0e-4
+  weight_decay: 1.0e-4
+  model_name: "efficientnet_b0"
+  mixed_precision: false # CPU => turn off AMP
+
+eval:
+  threshold: 0.5
