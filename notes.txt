@@ -1,0 +1,7 @@
+[Optional] Deepfake Generation Notes
+
+- For ethical and compute reasons, this scaffold does not include full GAN training.
+- If you want to experiment:
+  - Look into pretrained StyleGAN2 for face synthesis.
+  - For face-swapping, explore open-source: DeepFaceLab, FaceSwap.
+- ALWAYS use consented or benchmark datasets.
